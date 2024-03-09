@@ -1,0 +1,9 @@
+check cipher: https://www.dcode.fr/cipher-identifier
+
+there are two types of ciphers here to get to the flag: whitespace and pika languages.
+
+https://www.dcode.fr/whitespace-language
+https://www.dcode.fr/pikalang-language
+
+
+flag: wxmctf{pika_chewy}
