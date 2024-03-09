@@ -1,0 +1,3 @@
+go to instance page and you will find the flag by inspect elemento.
+
+flag: wxmctf{4nd_h1s_n4me_1s!!!!!!!}
