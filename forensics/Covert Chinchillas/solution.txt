@@ -1,0 +1,29 @@
+classic forensic challenge.
+
+I tried using binwalk and strings but nothing, so I aperisolve it and I found out there is a password. I immediately thinking of using
+steghide to solve because of the password.
+
+5up32_53c237_5n34ky_p455w02d
+
+terminal logs:
+
+┌──(kali㉿kali)-[~/Desktop]
+└─$ strings chinchilla.jpeg > read.txt
+                                                                                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop]
+└─$ steghide extract -sf chinchilla.jpeg -p "5up32_53c237_5n34ky_p455w02d"
+wrote extracted data to "emb.txt".
+                                                                                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop]
+└─$ ls
+ chinchilla.jpeg  'CTF 2023'  'CTF 2024'   emb.txt   list_contents.sh   nikto_results   nikto_results2   read.txt
+                                                                                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop]
+└─$ read emb.txt                  
+^C                                                                                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop]
+└─$ cat emb.txt             
+wxmctf{7h1n95_423_n07_41w4y5_wh47_7h3y_533m}
+
+
+flag: wxmctf{7h1n95_423_n07_41w4y5_wh47_7h3y_533m}
